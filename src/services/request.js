@@ -1,7 +1,7 @@
 import axios from "axios"
 import { medusaUrl } from "./config"
-console.log('window.location.origin',window.location.origin);
-const client = axios.create({ baseURL: window.location.origin + '/api' })
+
+const client = axios.create({ baseURL: medusaUrl })
 
 export default function medusaRequest(method, path = "", payload = {}) {
   const options = {
